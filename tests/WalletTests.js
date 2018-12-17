@@ -10,7 +10,7 @@ const {TestModule} = ReactNative.NativeModules;
 React.PropTypes=require('prop-types');
 React.createClass=require('create-react-class');
 
-var Tests = React.createClass({
+var WalletTests = React.createClass({
   shouldResolve: false,
   shouldReject: false,
   getInitialState() {
@@ -20,7 +20,7 @@ var Tests = React.createClass({
   },
   componentDidMount() {
     if(this.props.TestName === "testElaWallet"){
-      Promise.all([this.testSomeTest()]).then(()=>
+      Promise.all([this.testElaWallet()]).then(()=>
       {
         TestModule.markTestPassed(this.shouldResolve);
       });
@@ -42,6 +42,6 @@ var Tests = React.createClass({
   }
 });
 
-Tests.displayName = 'WalletTests';
+WalletTests.displayName = 'WalletTests';
 
 module.exports = WalletTests;
