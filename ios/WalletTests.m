@@ -38,7 +38,7 @@
 -(void)testElaWallet
 {
   [_runner runTest:_cmd
-            module:@"Tests"
+            module:@"WalletTests"
       initialProps:@{@"TestName": @"testElaWallet"}
 configurationBlock:nil];
   RCTLogInfo(@"Executing the tests.");
